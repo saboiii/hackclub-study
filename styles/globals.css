@@ -2,32 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: josefin;
+    src: url('/fonts/JosefinSans-Light.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer base{
+    body{
+        @apply bg-black text-white font-josefin font-light text-xs
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    h1{
+        @apply text-[64px]
+    }
+
+    .boxshadow{
+        box-shadow: 0 0 2px #e6e6e6,
+        0 0 5px #e6e6e6,
+        0 0 20px #e6e6e6
+    }
+
+    .button1{
+        @apply text-[9px] px-6 py-2 uppercase outline outline-[0.75px] tracking-wider outline-[#585858] rounded-full font-josefin font-thin
+    }
+
+    .button1:hover{
+        @apply bg-[#e6e6e6] text-black font-normal boxshadow outline-none transition ease-in-out duration-500 cursor-pointer
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
 }
