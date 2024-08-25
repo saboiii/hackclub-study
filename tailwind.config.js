@@ -11,30 +11,36 @@ module.exports = {
         'gradientbg': "url('/4.png')",
       },
       animation: {
-        blob: "blob 10s infinite",
         "loop-scroll": "loop-scroll 30s linear infinite",
+        fadeslow: "fade-in-slow 2s ease-in-out forwards",
+        fade: "fade-in 4s ease-in-out forwards",
       },
       fontFamily: {
         josefin: ["Josefin Sans", "sans-serif"],
       },
       keyframes: {
+        "fade-in-slow": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0%",
+          },
+          "50%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
         "loop-scroll": {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
-        },
-        blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
-          },
-          "33%": {
-            transform: "translate(50px, -40px) scale(1.05)",
-          },
-          "66%": {
-            transform: "translate(-40px, 50px) scale(0.95)",
-          },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)",
-          },
         },
       },
     },

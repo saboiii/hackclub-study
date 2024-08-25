@@ -13,14 +13,14 @@ export default function Home() {
         <div className="flex flex-col w-screen h-screen">
           <div className="flex flex-col w-full h-full bg-gradientbg bg-right-top brightness-110 bg-cover items-center justify-between">
             <div className="flex flex-col items-center justify-center mt-[30vh]">
-              <div className="text-[9px] uppercase mb-5">Discover the joy of code, together.</div>
+              <div className="text-[9px] uppercase mb-5 animate-fadeslow">Discover the joy of code, together.</div>
               <Image
                 src='/title.png'
                 height={150}
                 width={150}
-                className="w-[250px] md:w-[400px] mb-12"
+                className="w-[250px] md:w-[400px] mb-12 animate-fadeslow"
               />
-              <div className="flex flex-row button1 mb-12">About us</div>
+              <div className="flex flex-row button1 mb-12 animate-fade">About us</div>
             </div>
             <div className="flex flex-row overflow-hidden w-[90vw] space-x-16 mb-20">
               <div className="flex flex-row space-x-16 animate-loop-scroll">
